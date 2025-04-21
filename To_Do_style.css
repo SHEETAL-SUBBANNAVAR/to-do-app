@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 15px;
+  position: relative;
+}
+
+#progressBar {
+  height: 100%;
+  background: #00d2ff;
+  width: 0%;
+
+  transition: width 0.3s ease-in-out;
+}
+
+#progressCount {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #00d2ff;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+#addBtn {
+  padding: 10px 20px;
+  background: #00d2ff;
+  color: #fff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #0088cc;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.task.done .task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  cursor: pointer;
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  transform: scale(1.2);
+  color: #00d2ff;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: center;
+}
+
+.heart {
+  color: red;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
